@@ -47,6 +47,13 @@ y_pred_gb = gb_model.predict(X_test)
 gb_accuracy = accuracy_score(y_test, y_pred_gb)
 print("\nTuned Gradient Boosting Accuracy:", gb_accuracy)
 
+import joblib
+
+# Save BEST model (use Gradient Boosting)
+joblib.dump(gb_model, "earthquake_model.pkl")
+
+print("Model saved successfully!")
+
 
 # STEP 5: Cross-Validation (Random Forest)
 
